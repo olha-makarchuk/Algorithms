@@ -15,11 +15,17 @@ int iterativeResult = binarySearch.SearchIterative();
 int recursiveResult = binarySearch.SearchRecursive();
 
 
-LinearSearch
-linearSearch = new LinearSearch
+LinearSearch linearSearch = new LinearSearch
 {
     NumArray = arr,
     SearchedNumber = numberToFind
 };
 
 
+LongestCommonSubstring longestCommonSubstring = new LongestCommonSubstring
+{
+    FirstWord = "диск", 
+    SecondWord = "тиск"
+};
+
+string result = longestCommonSubstring.Search();
