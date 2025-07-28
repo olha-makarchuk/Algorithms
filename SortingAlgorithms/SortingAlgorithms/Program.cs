@@ -6,3 +6,6 @@ BubbleSort bubbleSort = new() { NumArray = arr };
 
 MergeSort mergeSort = new();
 mergeSort.Sort(arr, 0, arr.Length - 1);
+
+QuickSort quickSort = new();
+quickSort.Sort(arr);

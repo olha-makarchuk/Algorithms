@@ -24,7 +24,6 @@
             int rightIndex = 0;
             int mergedIndex = 0;
 
-            // Traverse both arrays simultaneously and store the smallest element of both to mergedArr
             while (leftIndex < leftArr.Length && rightIndex < rightArr.Length)
             {
                 if (leftArr[leftIndex] < rightArr[rightIndex])
@@ -37,13 +36,11 @@
                 }
             }
 
-            // If any elements remain in the left array, append them to mergedArr
             while (leftIndex < leftArr.Length)
             {
                 mergedArr[mergedIndex++] = leftArr[leftIndex++];
             }
 
-            // If any elements remain in the right array, append them to mergedArr
             while (rightIndex < rightArr.Length)
             {
                 mergedArr[mergedIndex++] = rightArr[rightIndex++];
