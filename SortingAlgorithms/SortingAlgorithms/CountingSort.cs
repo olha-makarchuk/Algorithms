@@ -1,5 +1,6 @@
 ﻿namespace SortingAlgorithms
 {
+    //O(n + k)
     public class CountingSort
     {
         public int[] Sort(int[] arr)
