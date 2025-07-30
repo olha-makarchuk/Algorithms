@@ -13,3 +13,7 @@ quickSort.Sort(arr);
 arr = [9, 4, 3, 8, 10, 2, 5];
 HeapSort heapSort = new();
 heapSort.Sort(arr);
+
+arr = [9, 4, -3, 8, 9, 10, 2, 5];
+CountingSort countingSort = new();
+countingSort.Sort(arr);
