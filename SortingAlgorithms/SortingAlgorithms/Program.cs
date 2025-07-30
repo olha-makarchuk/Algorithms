@@ -11,6 +11,5 @@ QuickSort quickSort = new();
 quickSort.Sort(arr);
 
 arr = [9, 4, 3, 8, 10, 2, 5];
-
 HeapSort heapSort = new();
 heapSort.Sort(arr);

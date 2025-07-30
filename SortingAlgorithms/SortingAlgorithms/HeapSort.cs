@@ -1,5 +1,6 @@
 ﻿namespace SortingAlgorithms
 {
+    //O(n log n)
     public class HeapSort
     {
         public void Heapify(int[] arr, int n, int i)
