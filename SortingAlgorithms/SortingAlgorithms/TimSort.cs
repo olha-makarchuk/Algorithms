@@ -12,14 +12,12 @@
 
             int runSize = 4;
 
-            // 1. Сортування кожного run за допомогою Insertion Sort
             for (int i = 0; i < arr.Length; i += runSize)
             {
                 int right = Math.Min(i + runSize - 1, arr.Length - 1);
                 InsertionSort(arr, i, right);
             }
 
-            // 2. Поступове злиття відсортованих блоків
             for (int size = runSize; size < arr.Length; size *= 2)
             {
                 for (int left = 0; left < arr.Length; left += 2 * size)
@@ -33,7 +31,6 @@
                     int[] rightRun = mergeSort.Sort(arr, mid + 1, right);
                     int[] merged = mergeSort.Sort(leftRun, rightRun);
 
-                    // Копіюємо назад у оригінальний масив
                     for (int i = 0; i < merged.Length; i++)
                     {
                         arr[left + i] = merged[i];
