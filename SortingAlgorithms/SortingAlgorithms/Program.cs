@@ -25,3 +25,7 @@ insertionSort.Sort(arr);
 arr = [9, 4, -3, 8, 9, 10, 2, 5];
 SelectionSort selectionSort = new();
 selectionSort.Sort(arr);
+
+arr = [9, 4, -3, 8, 9, 10, 2, 5];
+ShellSort shellSort = new();
+shellSort.Sort(arr);
