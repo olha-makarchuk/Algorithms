@@ -21,3 +21,7 @@ countingSort.Sort(arr);
 arr = [9, 4, -3, 8, 9, 10, 2, 5];
 InsertionSort insertionSort = new();
 insertionSort.Sort(arr);
+
+arr = [9, 4, -3, 8, 9, 10, 2, 5];
+SelectionSort selectionSort = new();
+selectionSort.Sort(arr);
