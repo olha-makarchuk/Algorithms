@@ -1,31 +1,20 @@
 ﻿using SortingAlgorithms;
 
-int[] arr = { 34, 64, 25, 12, 22, 11, 90 };
+int[] original = { 9, 4, 3, 8, 9, 10, 2, 5 };
 
-BubbleSort bubbleSort = new() { NumArray = arr };
+PrintResult("BubbleSort", new BubbleSort { NumArray = Copy(original) }.Sort());
+PrintResult("MergeSort", new MergeSort().Sort(Copy(original), 0, original.Length - 1));
+PrintResult("QuickSort", new QuickSort().Sort(Copy(original)));
+PrintResult("HeapSort", new HeapSort().Sort(Copy(original)));
+PrintResult("CountingSort", new CountingSort().Sort(Copy(original)));
+PrintResult("InsertionSort", new InsertionSort().Sort(Copy(original)));
+PrintResult("SelectionSort", new SelectionSort().Sort(Copy(original)));
+PrintResult("ShellSort", new ShellSort().Sort(Copy(original)));
+PrintResult("RadixSort", new RadixSort().Sort(Copy(original)));
 
-MergeSort mergeSort = new();
-mergeSort.Sort(arr, 0, arr.Length - 1);
+int[] Copy(int[] arr) => (int[])arr.Clone();
 
-QuickSort quickSort = new();
-quickSort.Sort(arr);
-
-arr = [9, 4, 3, 8, 10, 2, 5];
-HeapSort heapSort = new();
-heapSort.Sort(arr);
-
-arr = [9, 4, -3, 8, 9, 10, 2, 5];
-CountingSort countingSort = new();
-countingSort.Sort(arr);
-
-arr = [9, 4, -3, 8, 9, 10, 2, 5];
-InsertionSort insertionSort = new();
-insertionSort.Sort(arr);
-
-arr = [9, 4, -3, 8, 9, 10, 2, 5];
-SelectionSort selectionSort = new();
-selectionSort.Sort(arr);
-
-arr = [9, 4, -3, 8, 9, 10, 2, 5];
-ShellSort shellSort = new();
-shellSort.Sort(arr);
+void PrintResult(string name, int[] sorted)
+{
+    Console.WriteLine($"{name}: {string.Join(", ", sorted)}");
+}

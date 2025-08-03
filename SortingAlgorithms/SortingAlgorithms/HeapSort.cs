@@ -29,7 +29,7 @@
             }
         }
 
-        public void Sort(int[] arr)
+        public int[] Sort(int[] arr)
         {
             int n = arr.Length;
 
@@ -46,6 +46,8 @@
 
                 Heapify(arr, i, 0);
             }
+
+            return arr;
         }
     }
 }
